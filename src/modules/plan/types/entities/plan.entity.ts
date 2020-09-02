@@ -1,15 +1,21 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-class PlanEntity {
+export class PlanEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  firstName: string;
+  name: string;
 
   @Column()
-  lastName: string;
+  durationInWeeks: number;
+
+  @Column()
+  startingDate: Date;
+
+  @Column({ nullable: true })
+  lastModificationDate?: Date;
 
   @Column({ default: true })
   isActive: boolean;
