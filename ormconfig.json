@@ -1,0 +1,13 @@
+{
+  "type": "sqlite",
+  "database": "plans.db",
+  "entities": [
+    "dist/**/*.entity{.ts,.js}"
+  ],
+  "synchronize": true,
+  "migrationsTableName": "migrations",
+  "migrations": ["migration/*{.js, .ts}"],
+  "cli": {
+    "migrationsDir": "migrations"
+  }
+}
